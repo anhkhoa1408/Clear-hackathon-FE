@@ -1,0 +1,33 @@
+.story-container {
+  margin-top: 120px;
+  z-index: 1;
+  align-items: flex-start;
+  .story-overview {
+    inset: 120px;
+    position: sticky;
+    position: -webkit-sticky;
+    h4 {
+      font-size: 2.5rem;
+      margin: 0;
+    }
+
+    p {
+      font-size: 1.25rem;
+      font-weight: 400;
+      line-height: 2.4;
+    }
+
+    span {
+      font-weight: 700;
+    }
+  }
+
+  .story-image {
+    margin-left: auto;
+    img:not(:last-child) {
+      margin-bottom: 20rem;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

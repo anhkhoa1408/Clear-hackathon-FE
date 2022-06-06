@@ -1,0 +1,31 @@
+.container {
+    margin: 0 auto;
+}
+
+.mw-12 {
+    max-width: 1200px;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.col-6 {
+    flex-basis: 50%;
+}
+
+.col-12 {
+    flex-basis: 100%;
+}
