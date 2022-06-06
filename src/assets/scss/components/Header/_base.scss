@@ -1,0 +1,48 @@
+.header {
+  z-index: 2;
+  &--banner {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    max-width: 1200px;
+    max-height: 50px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    padding-top: 3.5rem;
+    img {
+      height: 40px;
+      width: 96px;
+    }
+  }
+
+  &--sidenav {
+    transform: rotate(90deg) translateX(80px);
+    transform-origin: right top;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    right: 0px;
+    padding: 40px 0px;
+    // border-bottom: 1px solid white;
+  }
+
+  &--navlink {
+    span {
+      color: #fff;
+      text-decoration: none;
+      display: block;
+      padding-right: 2.4rem;
+      font-size: 1.3rem;
+      cursor: pointer;
+      &:active {
+        font-weight: 800;
+      }
+    }
+  }
+}
