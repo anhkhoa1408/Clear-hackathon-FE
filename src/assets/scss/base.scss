@@ -3,6 +3,10 @@
 @import "./components/Story/base";
 
 // util class
+* {
+  box-sizing: border-box;
+}
+
 html,
 body {
   margin: 0;
