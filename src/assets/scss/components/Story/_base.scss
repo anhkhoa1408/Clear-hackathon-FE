@@ -24,16 +24,20 @@
 
   .story-image {
     margin-left: auto;
-    img:not(:last-child) {
-      margin-bottom: 20rem;
+    img {
       width: 100%;
       height: 100%;
+    }
+    img:not(:last-child) {
+      margin-bottom: 20rem;
     }
   }
 
   .story-objective {
     position: relative;
-    margin-top: 15rem;
+    // margin-top: 15rem;
+    margin-bottom: 15rem;
+    min-height: 100vh;
     h4 {
       font-size: 4rem;
       font-weight: 800;
@@ -42,6 +46,9 @@
       text-align: center;
     }
     &--card {
+      position: relative;
+      transition: top 0.3s ease;
+      top: 0;
       height: 272px;
       flex: 1;
       &:first-child {
@@ -85,6 +92,7 @@
       }
     }
     & .story-objective--card:hover {
+      top: -5px;
       .story-objective--content {
         background-color: transparent;
         & p {
@@ -93,6 +101,138 @@
         & h4 {
           display: none;
         }
+      }
+    }
+  }
+
+  .target-audience {
+    min-height: 100vh;
+    padding: 200px;
+    z-index: 1;
+    position: relative;
+    h4 {
+      text-align: center;
+      font-size: 4rem;
+      font-weight: 800;
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+    .target-bg {
+      z-index: -1;
+      background-image: url("https://ufll2022-kova.vercel.app/_next/image?url=%2Ftarget-audience.png&w=640&q=75");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: 600px;
+      height: 600px;
+      top: -60%;
+      position: absolute;
+    }
+  }
+
+  .story-choose {
+    padding: 200px 0px;
+    & h4 {
+      margin-bottom: 2rem;
+    }
+
+    & p {
+      line-height: 2rem;
+      font-size: 1.25rem;
+    }
+    .choose-one {
+      display: flex;
+      flex-direction: row;
+      &--img {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      &--img img:nth-child(1) {
+        transform: translateX(-33.33%);
+      }
+
+      &--img img:nth-child(2) {
+        margin: 1rem 0rem;
+        transform: translateX(33.33%);
+      }
+    }
+
+    .choose-two {
+      padding: 200px 0px;
+      &--img img:first-child {
+        transform: translateX(33.33%);
+      }
+      &--img img:last-child {
+        margin-top: 1rem;
+        transform: translateX(-33.33%);
+      }
+    }
+  }
+
+  .context-container {
+    display: flex;
+    flex-direction: column;
+    &--header {
+      align-self: center;
+      font-weight: 900;
+      font-size: 4.5rem;
+      margin-bottom: 2.5rem;
+    }
+    &--card {
+      position: relative;
+      transition: top 0.3s ease;
+      top: 0;
+      height: 272px;
+      width: 30%;
+      &:first-child {
+        margin-right: 20px;
+      }
+      &:last-child {
+        margin-left: 20px;
+      }
+      &:hover {
+        top: -5px;
+        .context-container--content {
+          background-color: transparent;
+        }
+      }
+    }
+    &--border {
+      border-radius: 12px;
+      height: 100%;
+      background: linear-gradient(
+        60.64deg,
+        rgb(51, 143, 255) 0%,
+        rgb(211, 251, 216) 100%
+      );
+      padding: 3px;
+    }
+    &--content {
+      border-radius: 12px;
+      background-color: rgb(1, 4, 19);
+      height: 100%;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 2.5rem 0rem;
+      transition: 0.3s ease;
+      h4 {
+        margin: 0;
+        font-size: 4rem;
+        font-weight: 900;
+      }
+      p {
+        line-height: 1.5;
+        font-size: 1.25rem;
+        font-weight: 400;
+        text-align: center;
       }
     }
   }
