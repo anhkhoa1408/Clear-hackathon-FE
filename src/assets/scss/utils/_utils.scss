@@ -88,6 +88,10 @@
   text-align: left;
 }
 
+.fs-14 {
+  font-size: 14px;
+}
+
 @each $position in $positions {
   $prefix: "p" + $position;
   @each $padding in $paddings {

@@ -35,7 +35,6 @@
 
   .story-objective {
     position: relative;
-    // margin-top: 15rem;
     margin-bottom: 15rem;
     min-height: 100vh;
     h4 {
@@ -45,7 +44,7 @@
       display: block;
       text-align: center;
     }
-    &--card {
+    &__card {
       position: relative;
       transition: top 0.3s ease;
       top: 0;
@@ -58,7 +57,7 @@
         margin-left: 20px;
       }
     }
-    &--border {
+    &__border {
       border-radius: 12px;
       height: 100%;
       background: linear-gradient(
@@ -68,7 +67,7 @@
       );
       padding: 3px;
     }
-    &--content {
+    &__content {
       border-radius: 12px;
       background-color: rgb(1, 4, 19);
       height: 100%;
@@ -91,9 +90,9 @@
         display: none;
       }
     }
-    & .story-objective--card:hover {
+    & .story-objective__card:hover {
       top: -5px;
-      .story-objective--content {
+      .story-objective__content {
         background-color: transparent;
         & p {
           display: block;
@@ -146,17 +145,17 @@
     .choose-one {
       display: flex;
       flex-direction: row;
-      &--img {
+      &__img {
         display: flex;
         flex-direction: column;
         align-items: center;
       }
 
-      &--img img:nth-child(1) {
+      &__img img:nth-child(1) {
         transform: translateX(-33.33%);
       }
 
-      &--img img:nth-child(2) {
+      &__img img:nth-child(2) {
         margin: 1rem 0rem;
         transform: translateX(33.33%);
       }
@@ -164,10 +163,10 @@
 
     .choose-two {
       padding: 200px 0px;
-      &--img img:first-child {
+      &__img img:first-child {
         transform: translateX(33.33%);
       }
-      &--img img:last-child {
+      &__img img:last-child {
         margin-top: 1rem;
         transform: translateX(-33.33%);
       }
@@ -177,18 +176,18 @@
   .context-container {
     display: flex;
     flex-direction: column;
-    &--header {
+    &__header {
       align-self: center;
       font-weight: 900;
       font-size: 4.5rem;
       margin-bottom: 2.5rem;
     }
-    &--card {
+    &__card {
       position: relative;
       transition: top 0.3s ease;
       top: 0;
       height: 272px;
-      width: 30%;
+      width: 32%;
       &:first-child {
         margin-right: 20px;
       }
@@ -197,12 +196,12 @@
       }
       &:hover {
         top: -5px;
-        .context-container--content {
+        .context-container__content {
           background-color: transparent;
         }
       }
     }
-    &--border {
+    &__border {
       border-radius: 12px;
       height: 100%;
       background: linear-gradient(
@@ -212,7 +211,7 @@
       );
       padding: 3px;
     }
-    &--content {
+    &__content {
       border-radius: 12px;
       background-color: rgb(1, 4, 19);
       height: 100%;
@@ -235,5 +234,67 @@
         text-align: center;
       }
     }
+  }
+
+  .static-container {
+    &__header {
+      font-size: 2.25rem;
+      text-align: center;
+      font-weight: 800;
+    }
+    &__chart-slider {
+      flex-wrap: nowrap;
+      overflow: hidden;
+      width: 100%;
+    }
+    &__slider-item {
+      flex: 0 0 100%;
+      transition: left 0.4s ease-out;
+      position: relative;
+      left: 0;
+    }
+    &__slider-btn {
+      justify-content: flex-end;
+      button {
+        font-size: 20px;
+        outline: none;
+        border-radius: 50%;
+        background: none;
+        color: white;
+        width: 45px;
+        height: 45px;
+        transition: 0.3s ease;
+        margin: 0 0.5rem;
+        cursor: pointer;
+        &:hover {
+          background-color: rgba(145, 158, 171, 0.08);
+        }
+      }
+    }
+    &__chart-content {
+      h4 {
+        font-size: 2rem;
+        font-weight: 900;
+        margin-bottom: 1.25rem;
+      }
+      p {
+        font-size: 1.25rem;
+        font-weight: 500;
+        line-height: 1.75rem;
+      }
+    }
+  }
+
+  .apexcharts-tooltip {
+    background: #fff;
+    color: #000;
+    font-size: 11px;
+    padding: 0.5rem;
+  }
+
+  .chart__tooltip-value {
+    color: #010413;
+    font-size: 14px;
+    font-weight: 900;
   }
 }
