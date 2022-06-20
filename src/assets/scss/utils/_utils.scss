@@ -65,7 +65,7 @@
 }
 
 .scroll-animate {
-  transition: transform 0.75s ease;
+  transition: transform 0.4s ease, top 0.6s ease;
 }
 
 .text-title {
@@ -175,4 +175,3 @@
     flex-basis: ($i / 12) * 100 * 1%;
   }
 }
-
