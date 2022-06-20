@@ -1,6 +1,8 @@
 @import "./utils/utils";
 @import "./components/Header/base";
 @import "./components/Story/base";
+@import "./components/Insight/base";
+@import "./components/BigIdea/base";
 
 // util class
 * {
@@ -15,5 +17,4 @@ body {
   background-color: #010413;
   color: #FFF;
   font-family: sans-serif;
-  // height: 1800px;
 }

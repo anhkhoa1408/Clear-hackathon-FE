@@ -1,0 +1,31 @@
+.big-idea {
+  &__bg {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  &__grad {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background: url("https://ufll2022-kova.vercel.app/bg-gradient.svg")
+      no-repeat center;
+    background-size: 70%;
+  }
+  &__idea {
+    background: url("https://ufll2022-kova.vercel.app/_next/image?url=%2Fsuccessfully.png&w=1920&q=75")
+      no-repeat center left;
+    background-size: 60%;
+    p {
+        text-align: left;
+        margin-left: 30%;
+        font-size: 1.25rem;
+        font-weight: 400;
+        line-height: 1.5;
+        position: relative;
+        top: 50px;
+    }
+  }
+}
