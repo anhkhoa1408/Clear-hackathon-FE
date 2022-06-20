@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import Chart from "react-apexcharts";
+import useLinearScroll from "../../utils/linearScroll";
 import useAnimateScroll from "../../utils/scroll";
 
 function Story() {
@@ -286,8 +287,8 @@ function Story() {
 
   useAnimateScroll("story-objective", 3, false, true);
   useAnimateScroll("last-image", 10, true);
-  useAnimateScroll("target-bg", 20, true, true);
-  useAnimateScroll("target-title", 30, true, true);
+  useAnimateScroll("target-title", 10, true, true);
+  useLinearScroll("target-bg", "target-audience", 6, true);
   useAnimateScroll("choose-one__img", 5, true, true);
   useAnimateScroll("choose-two__content", 15, false, true);
   useAnimateScroll("choose-two__img", 15, true, true);
@@ -322,7 +323,9 @@ function Story() {
         : 0;
       console.log(leftOffset);
       if (Number.parseInt(leftOffset) + item.offsetWidth > 0) {
-        item.style.left = `${-(Array.from(sliderItemsList).length - 1) * item.offsetWidth}px`
+        item.style.left = `${
+          -(Array.from(sliderItemsList).length - 1) * item.offsetWidth
+        }px`;
       } else {
         item.style.left = `${Number.parseInt(leftOffset) + item.offsetWidth}px`;
       }
@@ -404,14 +407,17 @@ function Story() {
         </div>
       </div>
 
-      <div className="target-audience d-flex flex-column justify-content-center align-items-center w-100 min-vh-100">
+      <div
+        id="target-audience"
+        className="target-audience d-flex flex-row w-100 min-vh-100 mb-8"
+      >
         <h4
           id="target-title"
-          className="align-self-center w-100 scroll-animate"
+          className="w-100 scroll-animate"
         >
           TARGET AUDIENCE
-          <div id="target-bg" className="target-bg scroll-animate"></div>
         </h4>
+        <div id="target-bg" className="target-bg scroll-animate"></div>
       </div>
 
       <div className="story-choose w-100 min-vh-100">
@@ -601,8 +607,12 @@ function Story() {
           </div>
         </div>
         <div className="static-container__slider-btn d-flex flex-row">
-          <button onClick={handlePrevious}>{"<"}</button>
-          <button onClick={handleNext}>{">"}</button>
+          <button onClick={handlePrevious}>
+            <span>{"<"}</span>
+          </button>
+          <button onClick={handleNext}>
+            <span>{">"}</span>
+          </button>
         </div>
       </div>
     </div>
