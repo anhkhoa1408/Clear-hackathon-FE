@@ -45,10 +45,7 @@ function Header() {
         document
           .getElementsByClassName("header--navlink")[2]
           .childNodes[0].classList.add("active");
-      } else if (
-        scrollOffset >= planElement.offsetTop &&
-        scrollOffset <= planElement.offsetTop + planElement.offsetHeight
-      ) {
+      } else if (scrollOffset >= planElement.offsetTop) {
         document
           .getElementsByClassName("header--navlink")[3]
           .childNodes[0].classList.add("active");
