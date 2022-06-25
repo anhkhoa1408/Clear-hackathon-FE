@@ -1,0 +1,10 @@
+version: "3.0"
+
+services:
+  front-end:
+    volumes:
+      - .:/app
+      - /app/node_modules/
+    build: .
+    ports:
+      - 3000:3000
