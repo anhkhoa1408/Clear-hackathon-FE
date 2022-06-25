@@ -333,7 +333,7 @@ function Story() {
   };
 
   return (
-    <div className="container mw-12 story-container d-flex flex-column">
+    <div id="story" className="container mw-12 story-container d-flex flex-column">
       <div className="d-flex flex-row align-items-start">
         <div className="story-overview col-6">
           <h4>OVERVIEW</h4>

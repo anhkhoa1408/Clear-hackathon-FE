@@ -8,7 +8,7 @@ function Insight() {
   useAnimateScroll("insight-digital", 15, false, true);
   useAnimateScroll("insight-proactive", 15, true, true);
   return (
-    <div className="insight mt-8">
+    <div id="insight" className="insight mt-8">
       <div
         id="insight__dirt-bg"
         className="insight__bg insight__dirt-bg min-vh-100 scroll-animate"
