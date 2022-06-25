@@ -13,7 +13,7 @@ function useLinearScroll(id, parentId, offset = 0, reverse = false) {
       let currentScroll = window.scrollY;
       let parentTopOffset = parentElement.getBoundingClientRect().top;
       let topOffset = "";
-      if (Math.abs(parentTopOffset) < window.innerHeight + 100) {
+      if (Math.abs(parentTopOffset) < window.innerHeight + 50) {
         if (currentScroll > lastScrollTop) {
           if (element) {
             if (!reverse) {

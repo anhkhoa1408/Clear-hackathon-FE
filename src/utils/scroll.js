@@ -7,7 +7,7 @@ function useAnimateScroll(id, offset = 0, reverse = false, percentage = false) {
     let scrollListener = window.addEventListener("scroll", () => {
       let currentScroll = window.scrollY;
       let scrollDiff = Math.abs(currentScroll - lastScrollTop);
-      scrollDiff = scrollDiff > 10 ? scrollDiff / 10 : scrollDiff;
+      scrollDiff = scrollDiff > 10 ? scrollDiff / 5 : scrollDiff;
       if (currentScroll > lastScrollTop) {
         if (element) {
           if (!reverse) {
