@@ -41,9 +41,10 @@
       padding-right: 2.4rem;
       font-size: 1.3rem;
       cursor: pointer;
-      &:active {
+      &.active {
         font-weight: 800;
       }
     }
+    
   }
 }
